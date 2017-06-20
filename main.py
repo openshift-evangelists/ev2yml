@@ -11,8 +11,9 @@ args = parser.parse_args()
 
 infile = args.infile
 password = args.password
-file = open(infile, 'r')
-outfile = open(infile+'.yml','w')
+file = open(infile, 'r', encoding='utf-8')
+outfile = open(infile+'.yml', 'w')
+
 #skip the first line which is the headers
 file.readline()
 for line in file:
